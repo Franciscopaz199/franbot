@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-load_dotenv('.env.example')
 
 TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN', '')
 GEMENI_TOKEN = os.environ.get('GEMENI_TOKEN', '')
