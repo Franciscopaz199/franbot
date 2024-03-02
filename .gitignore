@@ -1,0 +1,31 @@
+# Archivos temporales
+*.pyc
+*.egg-info/
+__pycache__/
+
+# Archivos de configuración local
+.env
+.localconfig
+
+# Entornos virtuales
+venv/
+
+# Directorios de dependencias de paquetes
+dist/
+build/
+eggs/
+
+# Archivos de logs
+*.log
+
+# Directorios de documentación
+docs/
+
+# Directorios de testing
+tests/
+
+# Archivos de cobertura
+.coverage
+
+# Archivos de IDE
+.idea/

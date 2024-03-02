@@ -1,11 +1,16 @@
 
 import  telebot
 from Gemeni import Gemeni
+from dotenv import load_dotenv
+import os
 
-API_TOKEN = '7136379160:AAHnGJA2TE2MT226HDxl09HCEeNH4fp5ypM'
-GEMENI_TOKEN = 'AIzaSyAjb55WyGqXCpZH42lEWekOXb_Ii3Hn-0k'
+load_dotenv()
+load_dotenv('.env.example')
 
-bot = telebot.TeleBot(token=API_TOKEN)
+TELEGRAM_TOKEN = os.environ.get('TELEGRAM_TOKEN', '')
+GEMENI_TOKEN = os.environ.get('GEMENI_TOKEN', '')
+
+bot = telebot.TeleBot(token=TELEGRAM_TOKEN)
 gemeni = Gemeni(token=GEMENI_TOKEN)
 
 @bot.message_handler(commands=['start', 'help'])
